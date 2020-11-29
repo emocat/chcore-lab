@@ -20,6 +20,9 @@ build: FORCE
 qemu: $(IMAGES) 
 	$(QEMU) $(QEMUOPTS)
 
+qemu-nox: $(IMAGES) 
+	$(QEMU) -nographic $(QEMUOPTS)
+
 qemu-gdb: $(IMAGES)
 	@echo "***"
 	@echo "*** make qemu-gdb'." 1>&2
